@@ -7,7 +7,7 @@ const createTournament = async (reqBody) => {
 
 /** Get Tournament list service */
 const getTournamentList = async () => {
-  return Tournament.find();
+  return Tournament.find().populate("player").populate("team");
 };
 
 /** Get Tournament by Id service */

@@ -7,7 +7,7 @@ const createTeam = async (reqBody) => {
 
 /** Get Team list service */
 const getTeamList = async () => {
-  return Team.find();
+  return Team.find().populate("player").populate("sport");
 };
 
 /** Get Team by Id service */

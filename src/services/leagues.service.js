@@ -7,7 +7,7 @@ const createLeag = async (reqBody) => {
 
 /** Get Leagues list service */
 const getLeagList = async () => {
-  return Leagues.find();
+  return Leagues.find().populate("team");
 };
 
 /** Get Leagues by Id service */

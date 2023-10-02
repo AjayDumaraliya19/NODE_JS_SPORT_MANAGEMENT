@@ -84,7 +84,7 @@ const updateUser = async (req, res) => {
   } catch (error) {
     res.status(error?.status || 400).json({
       success: false,
-      message: error?.message || "Sometbhing went wrong!",
+      message: error?.message || "Something went wrong!",
     });
   }
 };
